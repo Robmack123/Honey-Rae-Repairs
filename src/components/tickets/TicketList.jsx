@@ -39,6 +39,7 @@ export const TicketList = () => {
   return (
     <div className="tickets-container">
       <h2>Tickets</h2>
+
       <FilterBar
         setShowEmergencyOnly={setShowEmergencyOnly}
         setSearchTerm={setSearchTerm}
