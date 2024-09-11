@@ -4,6 +4,7 @@ import { TicketList } from "./components/tickets/TicketList";
 import { NavBar } from "./components/nav/NavBar";
 import { CustomerList } from "./components/customers/CustomersList";
 import { EmployeeList } from "./components/employees/EmployeesList";
+import { Welcome } from "./components/welcome/Welcome";
 
 export const App = () => {
   return (
@@ -17,6 +18,7 @@ export const App = () => {
           </>
         }
       >
+        <Route index element={<Welcome />} />
         <Route path="tickets" element={<TicketList />} />
         <Route path="customers" element={<CustomerList />} />
         <Route path="employees" element={<EmployeeList />} />
