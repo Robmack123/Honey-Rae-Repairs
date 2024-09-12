@@ -4,8 +4,8 @@ export const getAllEmployees = () => {
   );
 };
 
-export const getEmployees = () => {
-  return fetch(`http://localhost:8088/users?isStaff=true`).then((res) =>
-    res.json()
-  );
+export const getEmployeeByUserId = (id) => {
+  return fetch(
+    `http://localhost:8088/employees?userId=${id}&_expand=user&_embed=employeeTickets`
+  ).then((res) => res.json());
 };
