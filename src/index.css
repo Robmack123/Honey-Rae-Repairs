@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Import the google web fonts you want to use */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Quicksand&family=Roboto:wght@100&display=swap");
 
@@ -110,4 +114,3 @@ button {
   font-weight: bold;
   text-shadow: 2px 3px 4px lightslategray;
 }
-
