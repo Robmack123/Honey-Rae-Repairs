@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import "./Employees.css";
 import { User } from "../../users/User";
-import { getEmployees } from "../../services/employeesService";
+import { Link } from "react-router-dom";
+import { getStaffUser } from "../../services/userService";
 
 export const EmployeeList = () => {
   const [employees, setEmployees] = useState([]);
 
   useEffect(() => {
-    getEmployees().then((employeeArray) => {
+    getStaffUser().then((employeeArray) => {
       setEmployees(employeeArray);
       console.log("Employee set");
     });
@@ -16,7 +17,11 @@ export const EmployeeList = () => {
   return (
     <div className="employees">
       {employees.map((employeeObj) => {
-        return <User user={employeeObj} key={employeeObj.id} />;
+        return (
+          <Link to={`/employees/${employeeObj.id}`} key={employeeObj.id}>
+            <User user={employeeObj} />;
+          </Link>
+        );
       })}
     </div>
   );
