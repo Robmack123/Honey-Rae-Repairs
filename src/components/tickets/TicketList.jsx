@@ -1,7 +1,7 @@
 import { getAllTickets } from "../../services/ticketService.js";
 import { useState, useEffect } from "react";
 import "./Tickets.css";
-import { Ticket } from "./ticket.jsx";
+import { Ticket } from "./Ticket.jsx";
 import { FilterBar } from "./FilterBar.jsx";
 
 export const TicketList = ({ currentUser }) => {

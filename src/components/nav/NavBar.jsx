@@ -11,10 +11,13 @@ export const NavBar = () => {
         <Link to="/tickets">Tickets</Link>
       </li>
       <li className="navbar-item">
-        <Link to="/customers">Customers</Link>
+        <Link to="/employees">Employees</Link>
       </li>
       <li className="navbar-item">
-        <Link to="/employees">Employees</Link>
+        <Link to="/customers">Customers</Link>
+      </li>
+      <li>
+        <Link to="/profile">Profile</Link>
       </li>
       {localStorage.getItem("honey_user") ? (
         <li className="navbar-item navbar-logout">
